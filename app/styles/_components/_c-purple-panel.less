@@ -1,0 +1,255 @@
+.additional {
+  .g-m-screen-sm-max ({
+    overflow-x: hidden;
+    white-space: nowrap;
+  });
+}
+.c-purple-panel {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: linear-gradient(to top, #7285fa, @purple);
+  background: -ms-linear-gradient(to top, #7285fa, @purple);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7285fa', endColorstr='@purple');
+  .g-m-screen-xs ({
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
+}
+.c-purple-panel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.going-xamarin {
+  padding-right: 80px;
+  .g-m-screen-md-max ({
+    padding-right: 15px;
+  });
+}
+.going-native {
+  padding-left: 80px;
+  .g-m-screen-md-max ({
+    padding-left: 0;
+    padding-right: 15px;
+  });
+}
+#owl-purple .going-xamarin.item,
+#owl-purple .going-native.item {
+  white-space: normal;
+  float: left;
+  font-size: 18px;
+  color: @white;
+  text-align: center;
+  .g-m-screen-sm-max ({
+    font-size: 14px;
+    min-height: 516px;
+  });
+  .g-m-screen-xs ({
+    min-height: 333px;
+  });
+  p {
+    margin: 45px 0;
+    text-align: left;
+    font-weight: 100;
+    .g-m-screen-md-max ({
+      padding-left: 60px;
+      font-size: 18px;
+      position: relative;
+    });
+    .g-m-screen-xs ({
+      margin: 20px 0 20px 0;
+      font-size: 13px;
+      line-height: 1.8;
+    });
+  }
+  .marker-number {
+    font-size: 48px;
+    color: #ccd6ff;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    top: -17px;
+    .g-m-screen-md-max ({
+      font-size: 35px;
+      position: absolute;
+      left: 20px;
+    });
+  }
+  .g-m-screen-sm-max ({
+    background-color: @dark-purple;
+    padding-top: 25px;
+    margin: 0 10px;
+  });
+  .g-m-screen-xs ({
+    text-align: left;
+    min-width: 260px;
+    padding-top: 20px;
+    float: none;
+    max-width: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+
+  });
+}
+.going-xamarin-icon {
+  width: 73px;
+  height: 73px;
+  background-image: url("../images/sprite.png");
+  background-position: -1100px 0px;
+  display: inline-block;
+  position: absolute;
+  .g-m-screen-md-max ({
+    position: relative;
+    top: 25px;
+    left: 20px;
+  });
+  .g-m-screen-xs ({
+    background-position: -1300px 0px;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+  });
+
+}
+.purple-panel-title {
+  text-transform: uppercase;
+  font-size: 28px;
+  color: @white;
+  display: inline-block;
+  padding-left: 100px;
+  font-weight: 100;
+  .g-m-screen-md-max ({
+    padding-left: 20px;
+  });
+  .g-m-screen-sm-max ({
+    font-size: 24px;
+  });
+  .g-m-screen-xs ({
+    padding-left: 30px;
+  });
+  span {
+    .g-m-screen-xs ({
+      display: none;
+    });
+  }
+}
+.going-native-icon {
+  width: 73px;
+  height: 73px;
+  background-image: url("../images/sprite.png");
+  background-position: -1200px 0px;
+  display: inline-block;
+  position: absolute;
+  .g-m-screen-md-max ({
+    position: relative;
+    top: 25px;
+    left: 20px;
+  });
+  .g-m-screen-xs ({
+    background-position: -1300px 0px;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+  });
+}
+.purple-panel-title {
+  margin-bottom: 25px;
+  .g-m-screen-xs ({
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 0;
+  });
+}
+.purple-panel-btn-wrap {
+  padding-left: 5px;
+  .g-m-screen-xs ({
+   display: none;
+  });
+}
+.purple-panel-btn-wrap:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.purple-panel-btn {
+  float: left;
+  background-color: #5f74f1;
+  border: solid 1px transparent;
+  border-radius: 50px;
+  font-size: 18px;
+  padding: 5px 15px;
+  padding-right: 5px;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  .g-m-screen-md-max ({
+    font-size: 14px;
+    margin: 0 5px 10px 20px;
+  });
+}
+.purple-panel-btn:last-child {
+  margin-right: 0;
+}
+.purple-panel-btn:hover {
+  background-color: @purple;
+  a {
+    color: @white;
+  }
+}
+.purple-panel-btn-apple {
+  width: 23px;
+  height: 23px;
+  background-image: url("../images/sprite.png");
+  background-position: -1400px 0px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+}
+.purple-panel-btn-android {
+  width: 23px;
+  height: 23px;
+  background-image: url("../images/sprite.png");
+  background-position: -1600px 0px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+.purple-panel-btn-arrow {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/sprite.png");
+  background-position: -1500px 0px;
+  display: inline-block;
+  position: relative;
+  top: 0;
+}
+
+.purple-panel-btn-text {
+  position: relative;
+  top: -3px;
+  padding-right: 5px;
+}
+.owl-theme .owl-controls .owl-page  span  {
+  background: transparent !important;
+  box-sizing: border-box;
+  border: solid white !important;
+  opacity: 1 !important;
+}
+
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+  background: white !important;
+}
+@media (max-width: 350px) {
+  #owl-purple .going-xamarin.item, #owl-purple .going-native.item {
+    min-height: 355px;
+  }
+  .purple-panel-title {
+    font-size: 20px;
+  }
+}

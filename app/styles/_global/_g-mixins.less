@@ -1,0 +1,70 @@
+//mixin for border radius
+.g-m-border-radius (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+//mixin for @media
+
+// xs only
+.g-m-screen-xs(@rules) {
+  @media (max-width: @screen-xs-max) { @rules(); }
+}
+
+// sm and larger
+.g-m-screen-sm-min(@rules) {
+  @media (min-width: @screen-sm-min) { @rules(); }
+}
+
+// sm only
+.g-m-screen-sm(@rules) {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { @rules(); }
+}
+// sm and smaller
+.g-m-screen-sm-max(@rules) {
+  @media (max-width: @screen-sm-max) { @rules(); }
+}
+
+// md and larger
+.g-m-screen-md-min(@rules) {
+  @media (min-width: @screen-md-min) { @rules(); }
+}
+
+// md only
+.g-m-screen-md(@rules) {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { @rules(); }
+}
+
+// md and smaller
+.g-m-screen-md-max(@rules) {
+  @media (max-width: @screen-md-max) { @rules(); }
+}
+
+// lg
+.g-m-screen-lg(@rules) {
+  @media (min-width: @screen-lg-min) { @rules(); }
+}
+
+// 1: xs only, 2: sm and larger
+.g-m-screen(@rules-xs, @rules-sm) {
+  .g-m-screen-xs(@rules-xs);
+  .g-m-screen-sm-min(@rules-sm);
+}
+
+// 1: xs only, 2: sm only, 3: md and larger
+.g-m-screen(@rules-xs, @rules-sm, @rules-md) {
+  .g-m-screen-xs(@rules-xs);
+  .g-m-screen-sm(@rules-sm);
+  .g-m-screen-md-min(@rules-md);
+}
+
+// 1: xs only, 2: sm only, 3: md only, 4: lg and larger
+.g-m-screen(@rules-xs, @rules-sm, @rules-md, @rules-lg) {
+  .g-m-screen-xs(@rules-xs);
+  .g-m-screen-sm(@rules-sm);
+  .g-m-screen-md(@rules-md);
+  .g-m-screen-lg(@rules-lg);
+}
+

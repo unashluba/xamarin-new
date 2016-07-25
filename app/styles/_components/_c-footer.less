@@ -1,0 +1,231 @@
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 472px;
+  .g-m-screen-md-max ({
+    height: 147px;
+  });
+  .g-m-screen-sm-max ({
+    height: 274px;
+  });
+}
+.c-contacts-panel {
+  padding: 0 0 30px 0;
+  .g-m-screen-sm-max ({
+    padding: 30px 20px;
+    background-color: #f0f4f9;
+  });
+  p, a {
+    display: inline-block;
+    color: #465667;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+  a {
+    margin-right: 110px;
+    .g-m-screen-md-max ({
+      margin-right: 30px;
+    });
+    .g-m-screen-sm-max ({
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      top: -5px;
+    });
+
+  }
+  a:hover {
+    text-decoration: underline;
+    color: @blue;
+  }
+  span {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 10px;
+    .g-m-screen-sm-max ({
+      padding-right: 0;
+    });
+  }
+  p {
+    margin-right: 20px;
+    padding-left: 15px;
+    .g-m-screen-md-max ({
+      margin-right: 10px;
+    });
+    .g-m-screen-sm-max ({
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+    });
+  }
+}
+.email-icon, .phone-icon {
+  width: 45px;
+  height: 45px;
+  background-image: url("../images/sprite.png");
+  display: inline-block;
+  position: relative;
+  top: 15px;
+}
+.email-icon {
+  background-position: -100px -200px;
+  .g-m-screen-sm-max ({
+    display: none;
+  });
+}
+.phone-icon {
+  background-position: -200px -200px;
+  .g-m-screen-sm-max ({
+    display: none;
+  });
+}
+.contact-us-btn {
+  text-transform: uppercase;
+  background-color: #3ea800;
+  color: @white;
+  padding: 10px 45px;
+  border: none;
+  float: right;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  top: 13px;
+  .g-m-screen-md-max ({
+    padding: 10px 25px;
+  });
+  .g-m-screen-sm-max ({
+    float: none;
+    margin: 0 auto;
+    padding: 10px 45px;
+    display: block;
+  });
+  .g-m-screen-xs ({
+    width: 100%;
+  });
+}
+.contact-us-btn:hover {
+  background-color: #3e8e0e;
+}
+.c-contacts-panel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.footer-menu {
+  background-color: #ced7e1;
+  padding: 50px 0;
+  .g-m-screen-md-max ({
+    padding: 0;
+  });
+  p {
+    text-transform: uppercase;
+    font-size: 18px;
+    border-bottom: solid 1px #404040;
+  }
+}
+.footer-menu:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.footer-menu-item {
+  float: left;
+  width: 13%;
+  margin-right: 50px;
+  .g-m-screen-md-max ({
+    display: none;
+  });
+  ul {
+    list-style-type: none;
+    font-size: 14px;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+  li {
+    padding-bottom: 5px;
+  }
+  a {
+    color: #404040;
+  }
+  a:hover {
+    color: @blue;
+  }
+}
+.footer-menu-item.company {
+  margin-right: 0;
+}
+
+.foter-menu-item-showcase-list:last-child {
+  position: relative;
+  top: -26px;
+}
+@media (min-width: 1200px) and (max-width: 1238px) {
+  .foter-menu-item-showcase-list:last-child {
+    top: -15px;
+  }
+}
+.footer-menu-item.showcase-list {
+  width: 30%;
+}
+.foter-menu-item-showcase-list {
+  display: inline-block;
+  margin-right: 25px;
+}
+.all-rights {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ced7e1;
+  padding: 20px 0;
+  font-size: 14px;
+}
+.footer-logo {
+  width: 35px;
+  height: 20px;
+  background-image: url("../images/sprite.png");
+  background-position: -300px -200px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+}
+.phone-icon-mobile, .email-icon-mobile {
+  display: none;
+  .g-m-screen-sm-max ({
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/sprite.png");
+    display: inline-block;
+    position: relative;
+  });
+}
+.email-icon-mobile {
+  display: none;
+  .g-m-screen-sm-max ({
+  display: inherit;
+  background-position: -400px -200px;
+  top: 8px;
+  left: -8px; });
+}
+.phone-icon-mobile {
+  display: none;
+  .g-m-screen-sm-max ({
+  display: inherit;
+  background-position: -500px -200px;
+  top: 5px;
+  left: -5px;});
+}
+.email-icon-mobile-wrap {
+  display: none;
+  .g-m-screen-sm-max ({
+  margin-right: 10px;
+  border-radius: 25px;
+  background-color: #3ea800;
+  padding: 6px 20px;
+  margin-bottom: 10px;
+  display: inline-block;});
+}

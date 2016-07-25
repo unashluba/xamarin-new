@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+.main {
+  min-height: 100%;
+  position: relative;
+}
+.content {
+  padding-bottom: 482px;
+  .g-m-screen-md-max ({
+    padding-bottom: 157px;
+  });
+  .g-m-screen-sm-max ({
+    padding-bottom: 284px;
+  });
+}
+body, input, textarea, button {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: @dark-grey;
+  background: @light-grey;
+  font-size: 13px;
+  line-height: 1.5;
+}
+@font-face {
+  font-family: HelveticaLight;
+  src: url("../fonts/helvetica-light.eot");
+  src: url("../fonts/HelveticaLight.ttf");
+}
+@font-face {
+  font-family: PTSans;
+  src: url("../fonts/PTSans.eot");
+  src: url("../fonts/PTSans.woff");
+}
+h1 {
+  font-family: HelveticaLight;
+  color: @white;
+  text-transform: uppercase;
+  font-size: 54px;
+  font-weight: 100;
+  padding-bottom: 10px;
+  padding-left: 80px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 48px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: PTSans;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+a {
+  color: @white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @dark-blue;
+}
+
+ul {
+  list-style-type: disc;
+  & {
+    padding-left: 20px;
+  }
+}
+
+ol {
+  list-style-type: circle;
+  & {
+    padding-left: 20px;
+  }
+}
+
+.note {
+  color: @red;
+}
+
