@@ -2,15 +2,12 @@
   background-image: url("../images/enterprise-panel-bg.png");
   min-height: 400px;
   position: relative;
-  .g-m-screen-md-max ({
-    background-position: right;
-  });
-  .g-m-screen-md ({
-    background-position: 1365px 0;
-  });
+  background-position: right;
+  //.g-m-screen-md ({
+  //  background-position: 1365px 0;
+  //});
   .g-m-screen-sm-max ({
     text-align: center;
-    background-position: 1365px 0;
   });
   .g-m-screen-xs ({
     background-position: 735px -30px;
@@ -33,6 +30,7 @@
   .g-m-screen-sm-max ({
     position: relative;
     top: 85px;
+    color: @white;
   });
 }
 .enterprise-panel-text-hide {
@@ -65,6 +63,9 @@
   font-weight: bold;
   display: inline-block;
   color: #404040;
+  .g-m-screen-sm-max ({
+    color: @white;
+  });
   .g-m-screen-xs ({
     font-size: 14px;
     color: #0088ff;
