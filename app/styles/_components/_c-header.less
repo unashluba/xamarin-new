@@ -4,11 +4,13 @@
   width: 100%;
   z-index: 1000;
   top: 0;
+  min-height: 50px;
   .g-m-screen-sm-max ({
     background-color: @header-bg;
   });
   .g-m-screen-xs ({
     background-color: #382753;
+    min-height: 60px;
   });
 }
 .c-header:after {
@@ -32,7 +34,7 @@
     .g-m-screen-xs ({
       display: block;
       margin: 0 auto;
-      padding: 10px;
+      padding: 15px;
     });
   }
 }
@@ -45,8 +47,8 @@
   .g-m-screen-xs ({
     display: block;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     cursor: pointer;
   });
 }

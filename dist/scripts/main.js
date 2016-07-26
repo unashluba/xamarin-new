@@ -11587,20 +11587,26 @@ if (typeof Object.create !== "function") {
 }(jQuery, window, document));
 // console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 $(document).ready(function() {
+
   $(document).on('click', '.add-wrap-mob', function () {
+
     if (Modernizr.mq('(max-width: 767px)')) {
+
     if(!$(this).hasClass('current')) {
       $('.add-text-mob').slideUp();
       $('.add-wrap-mob').removeClass('current');
       $('.arrow-down-img').removeClass('active-arrow-down-img');
+
       $(this).addClass('current').next('.add-text-mob').slideDown();
       $(this).find('.arrow-down-img').addClass('active-arrow-down-img');
+
   } else {
       $('.add-text-mob').slideUp();
       $('.add-wrap-mob').removeClass('current');
       $('.arrow-down-img').removeClass('active-arrow-down-img');
      }}
   });
+
   $(document).on('click', '.adv-title', function() {
     if(!$(this).hasClass('current')) {
       $('.adv-hide').slideUp();
