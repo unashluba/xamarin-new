@@ -11,6 +11,13 @@
   background-position: right;
   background-repeat: no-repeat;
   padding: 75px 0;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
   .g-m-screen-md-max ({
     background-size: 0;
     padding: 0 0;
@@ -18,13 +25,6 @@
   .g-m-screen-xs ({
     margin: 0;
   });
-}
-.advantages-content:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
 }
 .advantages-text {
   float: left;
