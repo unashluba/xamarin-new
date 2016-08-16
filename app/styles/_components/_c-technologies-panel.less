@@ -24,14 +24,11 @@
   .g-m-screen-xs ({
     margin-bottom: 10px;
   });
+  &:after {
+    .mix-after;
+  }
 }
-.technologies-panel-items-wrap:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+
 .technologies-panel-item {
   width: 30%;
   float: left;
@@ -50,17 +47,15 @@
     min-height: 55px;
     position: relative;
   });
+  &:after {
+    .mix-after;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.technologies-panel-item:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.technologies-panel-item:last-child {
-  margin-right: 0;
-}
+
+
 .technologies-panel-item-icon {
   width: 40px;
   height: 55px;
@@ -73,25 +68,26 @@
     background-position: -1500px -100px;
     top: 0;
   });
+  &.android {
+    background-position: -1300px -100px;
+    top: 24%;
+    left: 32%;
+    .g-m-screen-xs ({
+      background-position: -1600px -100px;
+      top: 0;
+    });
+  }
+  &.wp {
+    background-position: -1400px -100px;
+    top: 29%;
+    left: 27%;
+    .g-m-screen-xs ({
+      background-position: -1700px -100px;
+      top: 8px;
+    });
+  }
 }
-.technologies-panel-item-icon.android {
-  background-position: -1300px -100px;
-  top: 24%;
-  left: 32%;
-  .g-m-screen-xs ({
-    background-position: -1600px -100px;
-    top: 0;
-  });
-}
-.technologies-panel-item-icon.wp {
-  background-position: -1400px -100px;
-  top: 29%;
-  left: 27%;
-  .g-m-screen-xs ({
-    background-position: -1700px -100px;
-    top: 8px;
-  });
-}
+
 .technologies-panel-item-icon-wrap {
   border: solid 2px #3cb1ff;
   border-radius: 50px;
@@ -105,6 +101,7 @@
     width: 80px;
   });
 }
+
 .technologies-panel-item-title {
   text-transform: uppercase;
   font-size: 22px;
@@ -116,46 +113,62 @@
     top: 8px;
     left: -15px;
   });
+  &.wp-title {
+    .g-m-screen-xs ({
+      width: 80%;
+      top: 8px;
+    });
+    @media (max-width: 429px) {
+      top: 0;
+    }
+  }
 }
-.technologies-panel-item-title.wp-title {
-  .g-m-screen-xs ({
-    width: 80%;
-    top: 8px;
-  });
-}
-@media (max-width: 429px) {
- .technologies-panel-item-title.wp-title {
-   top: 0;
- }
-}
+
 .technologies-panel-item-text {
   color: #ccebff;
   font-size: 15px;
 }
+
 .technologies-panel-bar-wrap {
   background-color: #22b8f9;
   border-radius: 10px;
   padding: 40px;
-  .g-m-screen-xs ({
-    background: none;
+  .g-m-screen-sm-max ({
+    margin: 0 auto;
+    padding: 10px 40px;
   });
   .g-m-screen-xs ({
+    background: none;
     border-radius: 0;
     margin: 0 10px;
     padding: 10px 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
   });
+  &:after {
+    .mix-after;
+  }
+  &.owl-carousel {
+    &.owl-theme {
+      width: auto;
+      background-color: #22b8f9;
+      padding-bottom: 25px;
+    }
+  }
 }
-.technologies-panel-bar-wrap:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+//width: auto !important;
+
 .technologies-panel-bar-item {
   width: 25%;
   float: left;
   margin-right: 35px;
+  .g-m-screen-md-max ({
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+  });
   p {
     color: @white;
     font-size: 18px;
@@ -171,9 +184,6 @@
   }
   ul {
     padding-left: 15px;
-    //.g-m-screen-md-max ({
-    //  padding-left: 0;
-    //});
     .g-m-screen-xs ({
      padding-left: 20px;
     });
@@ -190,28 +200,36 @@
     width: 100%;
     margin-bottom: 20px;
   });
+  &.other-tools {
+    width: 45%;
+    margin-right: 0;
+    .g-m-screen-xs ({
+      width: 100%;
+    });
+  }
+  &:last-child {
+    .g-m-screen-md-max ({
+      float: none;
+      width: 100%;
+    });
+    &:after {
+      .mix-after;
+    }
+  }
 }
-.technologies-panel-bar-item.other-tools {
-  width: 45%;
-  margin-right: 0;
-  .g-m-screen-xs ({
-    width: 100%;
-  });
-}
+
 .other-tools-list {
   float: left;
   margin-right: 40px;
+  .g-m-screen-md-max ({
+    float: none;
+    width: 100%;
+  });
   .g-m-screen-xs ({
     float: none;
   });
 }
-.technologies-panel-bar-item:last-child:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+
 .technologies-arrow-down-img {
   display: none;
   .g-m-screen-xs ({
@@ -225,51 +243,22 @@
     top: 40%;
   });
 }
-.technologies-panel-bar-item {
-  .g-m-screen-md-max ({
-    float: none;
-    width: 100%;
-    margin: 20px 0;
-  });
+
+#owl-tech {
+  .technologies-panel-bar-scroll {
+    .g-m-screen-xs ({
+      min-width: 300px;
+      margin-right: 10px;
+      background-color: #22b8f9;
+      padding: 10px 20px 0 20px;
+      display: inline-block;
+      vertical-align: top;
+      min-height: 300px;
+      width: 100%;
+    });
+  }
 }
-.technologies-panel-bar-item:last-child {
-  .g-m-screen-md-max ({
-    float: none;
-    width: 100%;
-  });
-}
-.technologies-panel-bar-wrap {
-  .g-m-screen-sm-max ({
-    margin: 0 auto;
-    padding: 10px 40px;
-  });
-  .g-m-screen-xs ({
-    border-radius: 0;
-    padding: 10px 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: block;
-    white-space: nowrap;
-  });
-}
-.other-tools-list {
-  .g-m-screen-md-max ({
-    float: none;
-    width: 100%;
-  });
-}
-#owl-tech .technologies-panel-bar-scroll {
-  .g-m-screen-xs ({
-    min-width: 300px;
-    margin-right: 10px;
-    background-color: #22b8f9;
-    padding: 10px 20px 0 20px;
-    display: inline-block;
-    vertical-align: top;
-    min-height: 300px;
-    width: 100%;
-  });
-}
+
 .add-wrap-tech {
   min-height: 40px;
   position: relative;
@@ -277,6 +266,7 @@
     cursor: pointer;
   });
 }
+
 .add-wrap-text {
   display: block;
   .g-m-screen-xs ({
@@ -284,24 +274,25 @@
     padding: 0 20px 30px 20px;
     font-size: 14px;
   });
-}
-.technologies-arrow-down-img.technologies-arrow-down-active {
-  background-position: -1100px -200px;
-}
-.technologies-panel-bar-wrap.owl-carousel.owl-theme {
-  width: auto !important;
-}
-@media (min-width: 769px) {
-  .add-wrap-text {
+  @media (min-width: 769px) {
     display: block !important;
   }
 }
-#owl-tech .owl-item:first-child  {
-  .g-m-screen-md-min ({
-    width: 680px !important;
-  });
+
+.technologies-arrow-down-img {
+    &.technologies-arrow-down-active {
+    background-position: -1100px -200px;
+  }
 }
-.technologies-panel-bar-wrap.owl-carousel.owl-theme {
-  background-color: #22b8f9;
-  padding-bottom: 25px;
+
+#owl-tech {
+  .owl-item {
+    &:first-child {
+      .g-m-screen-md-min ({
+        width: 680px !important;
+      });
+    }
+  }
 }
+
+

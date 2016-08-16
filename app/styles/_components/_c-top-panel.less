@@ -8,12 +8,11 @@
   .g-m-screen-xs ({
     min-height: inherit;
   });
-}
-@media (max-width: 480px) {
-  .c-top-panel {
+  @media (max-width: 480px) {
     background-position: -800px 0;
   }
 }
+
 .c-top-panel_content {
   padding: 35px 42px 40px 42px;
   background-color: rgba(144, 102, 229, 0.8);
@@ -47,13 +46,12 @@
   });
 }
 
-.main-title-wrap:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.main-title-wrap {
+  &:after {
+    .mix-after;
+  }
 }
+
 .icon-xamarin {
   width: 65px;
   height: 70px;
@@ -68,6 +66,7 @@
     display: inline-block;
   });
 }
+
 h1 {
   .g-m-screen-xs ({
     font-size: 28px;

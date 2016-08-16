@@ -1,27 +1,16 @@
 .c-codebase-panel {
   margin-top: 70px;
+  .g-m-screen-sm-max ({
+    margin-top: 50px;
+  });
   h2 {
     .g-m-screen-sm-max ({
       line-height: 1.1;
       color: #2c3e50;
-      font-weight: 500;
     });
   }
 }
-.codebase-panel-platforms:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.codebase-panel-platforms-cont:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+
 .codebase-panel-content {
   border: solid 2px @blue;
   border-radius: 20px;
@@ -34,6 +23,14 @@
     margin-bottom: 45px;
   });
 }
+
+.codebase-panel-platforms,
+.codebase-panel-platforms-cont {
+  &:after {
+    .mix-after;
+  }
+}
+
 .codebase-panel-platforms {
   background-color: @blue;
   padding: 20px 100px;
@@ -45,21 +42,89 @@
   .g-m-screen-xs ({
    margin-top: 25px;
   });
+  &.gray {
+    background-color: #edf4f9;
+    padding: 20px 40px;
+    .g-m-screen-md-max ({
+      padding: 0;
+      margin-top: 0;
+      position: relative;
+      border-bottom: solid 4px @blue;
+    });
+    &:after, &:before {
+      .g-m-screen-md-max ({
+        content: '';
+        border: solid transparent;
+        position: absolute;
+        left: 50%;
+        margin-left: -12px;
+        bottom: -25px;
+        width: 0;
+        visibility: visible;
+      });
+    }
+    &:before {
+      .g-m-screen-md-max ({
+        border-top-color: @blue;
+        border-width: 12px;});
+    }
+    &:after {
+      .g-m-screen-md-max ({
+        border-top-color: #edf4f9;
+        border-width: 18px;
+        margin-left: -18px;});
+    }
+  }
 }
+
 .codebase-panel-platforms-cont {
   float: left;
   width: 33%;
+  &:last-child {
+    .g-m-screen-md-max ({
+      border-right: none;
+    });
+  }
   .g-m-screen-md-max ({
     border-right: solid 1px #6cc7ef;
     text-align: center;
     padding: 10px 0;
   });
+  &.shared-content {
+    &.first {
+      padding-left: 0;
+      padding-right: 25px;
+      .g-m-screen-md-max ({
+        padding-left: 30px;
+        padding-right: 0;
+      });
+      @media (min-width: 1200px) and (max-width: 1240px) {
+          width: 31%;
+          padding-right: 18px;
+        }
+    }
+    &.access {
+      padding-left: 50px;
+      width: 28%;
+      padding-right: 10px;
+      .g-m-screen-md-max ({
+        padding-left: 30px;
+        padding-right: inherit;
+        width: auto;
+      });
+      @media (min-width: 1200px) and (max-width: 1240px) {
+        width: 28%;
+        padding-left: 25px;
+    }
+  }
+    &:last-child {
+      @media (min-width: 1200px) and (max-width: 1240px) {
+        width: 31%;
+      }
+    }
 }
-.codebase-panel-platforms-cont:last-child {
-  .g-m-screen-md-max ({
-    border-right: none;
-  });
 }
+
 .platforms-icon {
   width: 50px;
   height: 50px;
@@ -69,6 +134,27 @@
   position: relative;
   top: 5px;
   margin-right: 15px;
+  @media (min-width: 1200px) and (max-width: 1240px) {
+    margin-right: 10px;
+  }
+  &.apple {
+    background-position: -1700px 0;
+    .g-m-screen-xs ({
+      background-position: -900px -100px;
+    });
+  }
+  &.android {
+    background-position: -1800px 0;
+    .g-m-screen-xs ({
+      background-position: -1000px -100px;
+    });
+  }
+  &.wp {
+    background-position: 0px -100px;
+    .g-m-screen-xs ({
+      background-position: -1100px -100px;
+    });
+  }
   .g-m-screen-md-max ({
     display: block;
     float: none;
@@ -80,24 +166,7 @@
     height: 32px;
   });
 }
-.platforms-icon.apple {
-  background-position: -1700px 0px;
-  .g-m-screen-xs ({
-    background-position: -900px -100px;
-  });
-}
-.platforms-icon.android {
-  background-position: -1800px 0px;
-  .g-m-screen-xs ({
-    background-position: -1000px -100px;
-  });
-}
-.platforms-icon.wp {
-  background-position: 0px -100px;
-  .g-m-screen-xs ({
-    background-position: -1100px -100px;
-  });
-}
+
 .platforms-title {
   text-transform: uppercase;
   color: @white;
@@ -107,19 +176,13 @@
    display: none;
   });
 }
+
 .platforms-text {
   font-size: 18px;
   display: block;
   color: @white;
 }
-.codebase-panel-platforms.gray {
-  background-color: #edf4f9;
-  padding: 20px 40px;
-  .g-m-screen-md-max ({
-    padding: 0;
-    margin-top: 0;
-  });
-}
+
 .codebase-panel-gray-title {
   font-size: 24px;
   text-align: center;
@@ -196,62 +259,15 @@
   .g-m-screen-xs ({
     padding-left: 30px;
   });
-}
-.shared-content:last-child {
-  border-right: none;
-  float: right;
-  .g-m-screen-md-max ({
-    border-bottom: none;
-    float: none;
-    padding-left: 30px;
-  });
-}
-@media (min-width: 1200px) and (max-width: 1240px) {
-  .codebase-panel-platforms-cont.shared-content.first {
-    width: 31%;
-    padding-right: 18px;
+  &:last-child {
+    border-right: none;
+    float: right;
+    .g-m-screen-md-max ({
+      border-bottom: none;
+      float: none;
+      padding-left: 30px;
+    });
   }
-  .codebase-panel-platforms-cont.shared-content.access {
-    width: 28%;
-    padding-left: 25px;
-  }
-  .codebase-panel-platforms-cont.shared-content:last-child {
-    width: 31%;
-  }
-  .platforms-icon {
-    margin-right: 10px;
-  }
-}
-.codebase-panel-platforms.gray {
-  .g-m-screen-md-max ({
-    position: relative;
-    border-bottom: solid 4px @blue;
-  });
-}
-.codebase-panel-platforms.gray:after,
-.codebase-panel-platforms.gray:before
-{
-  .g-m-screen-md-max ({
-    content: '';
-    border: solid transparent;
-    position: absolute;
-    left: 50%;
-    margin-left: -12px;
-    bottom: -25px;
-    width: 0;
-    visibility: visible;
-  });
-}
-.codebase-panel-platforms.gray:before {
-  .g-m-screen-md-max ({
-    border-top-color: @blue;
-    border-width: 12px;});
-}
-.codebase-panel-platforms.gray:after {
-  .g-m-screen-md-max ({
-    border-top-color: #edf4f9;
-    border-width: 18px;
-    margin-left: -18px;});
 }
 
 .visual-studio {
@@ -287,28 +303,11 @@
     font-weight: 600;
   });
 }
-.enterprise-panel-title.codebase {
-  .g-m-screen-md-max ({
-   margin-bottom: 25px;
-  });
-}
-.codebase-panel-platforms-cont.shared-content.first {
-  padding-left: 0;
-  padding-right: 25px;
-  .g-m-screen-md-max ({
-    padding-left: 30px;
-    padding-right: 0;
-  });
-}
-
-.codebase-panel-platforms-cont.shared-content.access {
-  padding-left: 50px;
-  width: 28%;
-  padding-right: 10px;
-  .g-m-screen-md-max ({
-    padding-left: 30px;
-    padding-right: inherit;
-    width: auto;
-  });
+.h2-small-title {
+  &.codebase {
+    .g-m-screen-xs ({
+      font-weight: 900;
+    });
+  }
 }
 

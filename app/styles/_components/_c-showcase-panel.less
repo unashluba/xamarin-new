@@ -1,11 +1,12 @@
 .c-showcase-panel {
+  .g-m-screen-md-max ({
+    max-height: 500px;
+  });
   .g-m-screen-xs ({
     text-align: center;
     overflow-x: hidden;
     padding-bottom: 50px;
   });
-}
-.c-showcase-panel {
   h2 {
     .g-m-screen-sm-max ({
       margin-top: 35px;
@@ -13,20 +14,18 @@
     });
   }
 }
+
 .showcase-panel-wrap {
   padding-bottom: 80px;
   position: relative;
   .g-m-screen-xs ({
     display: none;
   });
+  &:after {
+    .mix-after;
+  }
 }
-.showcase-panel-wrap:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+
 .showcase-panel-arrow-left {
   cursor: pointer;
   width: 40px;
@@ -41,6 +40,7 @@
     top: 110px;
   });
 }
+
 .showcase-panel-arrow-right {
   cursor: pointer;
   width: 43px;
@@ -54,33 +54,32 @@
     top: 110px;
   });
 }
-#owl-showcase .showcase-panel-content.item {
-  padding-left: 110px;
-  width: 95%;
-  .g-m-screen-md-max ({
-    padding-left: 80px;
-  });
-  h3 {
-    font-size: 26px;
-    text-transform: uppercase;
-    color: #1491fd;
-    font-weight: 100;
-    text-align: left;
-    line-height: 1.2;
-  }
-  img {
-    .g-m-screen-md-max ({
-      display: none;
-    });
+
+#owl-showcase {
+  .showcase-panel-content {
+    &.item {
+     h3 {
+        font-size: 26px;
+        text-transform: uppercase;
+        color: #1491fd;
+        font-weight: 100;
+        text-align: left;
+        line-height: 1.2;
+      }
+    img {
+      .g-m-screen-md-max ({
+        display: none;
+      });
+     }
+    }
   }
 }
-.showcase-panel-content:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.showcase-panel-content {
+  &:after {
+    .mix-after;
+  }
 }
+
 .showcase-panel-text {
   width: 50%;
   float: left;
@@ -137,7 +136,33 @@
   margin: 15px auto 0 auto;
   cursor: pointer;
   color: @white;
+  &:hover {
+    background-color: #4db9f8;
+  }
 }
-.showcase-panel-mobile-btn:hover {
-  background-color: #4db9f8;
+///////////////////////
+.arrow-left-wrap {
+  float: left;
+  width: 10%;
+}
+
+.arrow-right-wrap {
+  float: right;
+  width: 5%;
+}
+
+.arrow-right-wrap, .arrow-left-wrap {
+  min-height: 509px;
+  .g-m-screen-md-max ({
+      min-height: 305px !important;
+  });
+}
+
+.content-slider-wrap {
+  float: left;
+  width: 84%;
+  padding-left: 10px;
+  .g-m-screen-md-max ({
+    max-height: 305px !important;
+  });
 }
